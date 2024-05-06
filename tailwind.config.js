@@ -43,17 +43,6 @@ export default {
             }
         },
         backgroundImage: {
-            'icon-accessibility': "url('/public/assets/images/icon-accessibility.blade.php')",
-            'icon-correct': "url('/public/assets/images/icon-correct.blade.php')",
-            'icon-css': "url('/public/assets/images/icon-css.blade.php')",
-            'icon-error': "url('/public/assets/images/icon-error.blade.php')",
-            'icon-html': "url('/public/assets/images/icon-html.svg')",
-            'icon-incorrect': "url('/public/assets/images/icon-incorrect.blade.php')",
-            'icon-js': "url('/public/assets/images/icon-js.blade.php')",
-            'icon-moon-light': "url('/public/assets/images/icon-moon-light.blade.php')",
-            'icon-moon-dark': "url('/public/assets/images/icon-moon-dark.blade.php')",
-            'icon-sun-light': "url('/public/assets/images/icon-sun-light.blade.php')",
-            'icon-sun-dark': "url('/public/assets/images/icon-sun-dark.blade.php')",
             'pattern-background-desktop-light': "url('/public/assets/images/pattern-background-desktop-light.svg')",
             'pattern-background-mobile-light': "url('/public/assets/images/pattern-background-mobile-light.svg')",
             'pattern-background-tablet-light': "url('/public/assets/images/pattern-background-tablet-light.svg')",
