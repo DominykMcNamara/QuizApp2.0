@@ -7,8 +7,8 @@
         <div>
             <ul class="space-y-3">
                 @foreach($quizzes as $quiz)
-                    <li class="p-3 w-full bg-white rounded-lg shadow-md ">
-                        <x-icons.HTMLIcon/>
+                    <li class="p-3 w-full bg-white rounded-lg shadow-md flex space-x-4 items-center ">
+                        <x-icons.icon-html />
                         <strong>
                             {{$quiz['quiz']}}
                         </strong></li>
