@@ -18,7 +18,7 @@ class AnswerFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => fake()->sentence(6),
+            'answer_text' => fake()->sentence(6),
         ];
     }
 }
