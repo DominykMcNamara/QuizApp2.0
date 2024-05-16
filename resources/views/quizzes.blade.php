@@ -17,7 +17,7 @@
             <ul class="space-y-3 desktop:space-y-8">
                 @foreach($quizzes as $quiz)
 
-                    <a href="/quiz/{{$quiz['id']}}">
+                    <a href="/quiz/{{$quiz['id']}}/questions">
                         <li class=" text-bm hover:bg-purple hover:text-white hover:cursor-pointer transition-all
                     desktop:text-hm tablet:text-hs
                      p-3
@@ -25,7 +25,7 @@
                     bg-white rounded-lg
                     drop-shadow-sm flex space-x-4
                     items-center ">
-                            <img src="{{$quiz['icon']}}" alt="{{$quiz['title']}}'s icon"></img>
+                            <img src="{{$quiz['icon']}}" alt="{{$quiz['title']}}'s icon">
                             <strong>
                                 {{$quiz['title']}}
                             </strong>

@@ -10,9 +10,14 @@ class Question extends Model
     use HasFactory;
 
     protected $fillable =
-        ['title', 'quiz_id'];
+        ['title'];
 
-    public function quiz() {
-        return $this->belongsTo(Quiz::class);
+    public function quizzes() {
+        return $this->belongsToMany(Quiz::class);
     }
+
+    public function answers() {
+        return $this->belongsToMany(Answer::class);
+    }
+
 }

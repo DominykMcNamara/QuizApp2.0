@@ -14,9 +14,9 @@
       return view('quizzes', ['quizzes' => $quizzes]);
     });
 
-    Route::get('/quiz/{id}', function ($id)  {
-
-        return view('quiz', ['quiz' => Quiz::find($id)]);
+    Route::get('/quiz/{id}/questions', function ($id)  {
+    $questions = Quiz::find($id)->questions()->simplePaginate(1);
+        return view('quiz', ['questions' => $questions]);
     });
 
     Route::get('/register', function () {
