@@ -21,33 +21,6 @@
                 $table->timestamps();
             });
 
-            Schema::create('questions', function (Blueprint $table) {
-                $table->id();
-                $table->string('question_text');
-                $table->timestamps();
-            });
-
-            Schema::create('question_quiz', function (Blueprint $table) {
-                $table->id();
-                $table->foreignIdFor(Quiz::class)->constrained()->onDelete('cascade');
-                $table->foreignIdFor(Question::class)->constrained()->onDelete('cascade');
-            });
-
-
-
-            Schema::create('answers', function (Blueprint $table) {
-                $table->id();
-                $table->string('answer_text');
-                $table->boolean('is_correct')->default(false);
-                $table->timestamps();
-            });
-            Schema::create('answer_question', function (Blueprint $table) {
-                $table->id();
-                $table->foreignIdFor(Question::class)->constrained()->onDelete('cascade');
-                $table->foreignIdFor(Answer::class)->constrained()->onDelete('cascade');
-            });
-
-
         }
 
         /**
@@ -56,9 +29,5 @@
         public function down(): void
         {
             Schema::dropIfExists('quizzes');
-            Schema::dropIfExists('questions');
-            Schema::dropIfExists('question_quiz');
-            Schema::dropIfExists('answers');
-            Schema::dropIfExists('question_answer');
         }
     };
