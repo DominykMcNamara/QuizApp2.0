@@ -1,12 +1,8 @@
 <?php
 
-    use App\Models\Answer;
-    use App\Models\Question;
-    use App\Models\Quiz;
     use Illuminate\Database\Migrations\Migration;
     use Illuminate\Database\Schema\Blueprint;
     use Illuminate\Support\Facades\Schema;
-    use PhpOption\Option;
 
     return new class extends Migration {
         /**
