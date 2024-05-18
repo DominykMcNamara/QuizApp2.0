@@ -2,13 +2,16 @@
 
 namespace Database\Factories;
 
+use App\Models\Answer;
 use App\Models\Question;
+use App\Models\Quiz;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\UserResponse>
  */
-class AnswerFactory extends Factory
+class UserResponseFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,9 +21,10 @@ class AnswerFactory extends Factory
     public function definition(): array
     {
         return [
-            'answer_text' => fake()->sentence(6),
+            'user_id' => User::all()->random()->id,
             'question_id' => Question::all()->random()->id,
-            'is_correct' => fake()->boolean()
+            'answer_id' => Answer::all()->random()->id,
+            'quiz_id' => Quiz::all()->random()->id
         ];
     }
 }

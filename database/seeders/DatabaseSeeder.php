@@ -2,9 +2,11 @@
 
     namespace Database\Seeders;
 
+    use App\Models\Answer;
     use App\Models\Question;
     use App\Models\Quiz;
     use App\Models\User;
+    use App\Models\UserResponse;
     use Illuminate\Database\Seeder;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -24,7 +26,12 @@
             ]);
 
             Quiz::factory(4)->create();
+
             Question::factory(10)->create();
+
+            Answer::factory(10)->create();
+
+            UserResponse::factory(10)->create();
 
         }
     }
