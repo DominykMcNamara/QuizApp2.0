@@ -20,6 +20,7 @@ class QuestionFactory extends Factory
     public function definition(): array
     {
         return [
+            'quiz_id' => Quiz::all()->random()->id,
             'question_text' => fake()->sentence(),
 
 

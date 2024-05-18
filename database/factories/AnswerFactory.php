@@ -19,6 +19,7 @@ class AnswerFactory extends Factory
     {
         return [
             'answer_text' => fake()->sentence(6),
+            'question_id' => Question::all()->random()->id
         ];
     }
 }

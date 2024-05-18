@@ -18,7 +18,7 @@ class QuizFactory extends Factory
     {
         return [
             'title' => fake()->sentence(3),
-            'icon' => fake()->imageUrl(100, 100)
+            'icon' => fake()->imageUrl(50, 50, 'computer', true)
         ];
     }
 }

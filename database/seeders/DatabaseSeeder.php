@@ -16,7 +16,7 @@
          */
         public function run(): void
         {
-            // User::factory(10)->create();
+            User::factory(10)->create();
 
             User::factory()->create([
                 'name' => 'Test User',
@@ -25,5 +25,6 @@
 
             Quiz::factory(4)->create();
             Question::factory(10)->create();
+
         }
     }
