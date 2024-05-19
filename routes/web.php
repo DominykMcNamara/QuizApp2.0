@@ -50,6 +50,11 @@
             ]);
     });
 
+    Route::post('/answer/question/{id}', function ($id) {
+
+        $question = Question::find($id);
+    });
+
     Route::get('/register', function () {
 
         return view('auth.register');

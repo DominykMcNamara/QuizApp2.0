@@ -30,7 +30,7 @@ place-items-center place-content-center px-4 desktop:px-0  ">
             @endforeach
         </div>
 
-        <ul>
+        <ul class="space-y-2">
 
             @foreach($answers as $answer)
 

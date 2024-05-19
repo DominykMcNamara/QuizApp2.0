@@ -16,11 +16,12 @@
 
         <div class="mobile:w-full tablet:w-[640px]">
 
-            <ul class="space-y-3 desktop:space-y-8">
+            <ul class=" desktop:space-y-4">
                 @foreach($quizzes as $quiz)
 
                     <a href="/quiz/{{$quiz['id']}}/questions">
-                        <li class=" text-bm hover:bg-purple hover:text-white hover:cursor-pointer transition-all
+                        <li class="text-bm hover:bg-purple hover:text-white hover:cursor-pointer
+                        transition-all
                     desktop:text-hm tablet:text-hs
                      p-3
                     desktop:p-5 tablet:w-[640px]
