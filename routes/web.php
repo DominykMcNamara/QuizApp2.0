@@ -1,24 +1,57 @@
 <?php
 
-    use Illuminate\Support\Facades\Route;
     use App\Models\Quiz;
-
+    use Illuminate\Support\Facades\Route;
 
 
     Route::get('/', function () {
+
         return view('home');
+
     });
 
-    Route::get('/quizzes', function ()  {
-      $quizzes = Quiz::all();
-      return view('quizzes', ['quizzes' => $quizzes]);
+    Route::get('/quizzes', function () {
+
+        $quizzes = Quiz::all();
+
+        return view('quizzes', ['quizzes' => $quizzes]);
+
     });
 
-    Route::get('/quiz/{id}/questions', function ($id)  {
-    $questions = Quiz::find($id)->questions()->simplePaginate(1);
-        return view('quiz', ['questions' => $questions]);
+    Route::get('/quiz/{id}/questions', function ($id) {
+
+        $quiz = Quiz::find($id);
+
+        if ($quiz == null) {
+
+            return redirect('/quizzes');
+
+        }
+
+        $questions = $quiz->questions()->simplePaginate(1);
+
+        if ($questions->isEmpty()) {
+
+            return redirect('/quizzes');
+
+        }
+
+        $answers = [];
+
+        foreach ($questions as $question) {
+            $answers = $question->answers;
+        }
+
+        return view('quiz',
+            [
+                'quiz' => $quiz,
+                'questions' => $questions,
+                'answers' => $answers
+            ]);
     });
 
     Route::get('/register', function () {
+
         return view('auth.register');
+
     });

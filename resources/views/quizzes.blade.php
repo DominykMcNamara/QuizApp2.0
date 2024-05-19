@@ -1,8 +1,10 @@
 <x-layout>
 
-    <div class="w-full grid desktop:grid-cols-2 tablet:grid-cols-1  desktop:place-content-center
+    <div class=" w-full desktop:h-screen place-content-center grid-rows-2 desktop:grid-rows-1 tablet:grid-rows-2 grid
+    desktop:grid-cols-2
+    tablet:grid-cols-1
+    desktop:place-content-center
     place-items-center
-    space-y-4
      ">
 
         <div class="space-y-4 desktop:space-y-10">

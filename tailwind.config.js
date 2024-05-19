@@ -24,7 +24,7 @@ export default {
                 'hs': ['28px', {
                     lineHeight: '100%',
                 }],
-                'bm': ['12px', {
+                'bm': ['18px', {
                     lineHeight: '150%',
                 }],
             },
