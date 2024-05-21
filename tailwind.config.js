@@ -77,5 +77,8 @@ export default {
         "./resources/**/*.js",
         "./resources/**/*.vue",
     ],
-    plugins: [],
+    plugins: [
+        // ...
+
+    ],
 }

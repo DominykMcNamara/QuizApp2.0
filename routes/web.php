@@ -1,5 +1,6 @@
 <?php
 
+    use App\Models\Question;
     use App\Models\Quiz;
     use Illuminate\Support\Facades\Route;
 
@@ -14,7 +15,7 @@
 
         $quizzes = Quiz::all();
 
-        return view('quizzes', ['quizzes' => $quizzes]);
+        return view('quizzes.index', ['quizzes' => $quizzes]);
 
     });
 
@@ -42,7 +43,7 @@
             $answers = $question->answers;
         }
 
-        return view('quiz',
+        return view('quizzes.quiz',
             [
                 'quiz' => $quiz,
                 'questions' => $questions,
@@ -50,10 +51,9 @@
             ]);
     });
 
-    Route::post('/answer/question/{id}', function ($id) {
-
-        $question = Question::find($id);
-    });
+   Route::get('/questions/create', function () {
+       return view('questions.create', ['quizzes' => Quiz::all()]);
+   });
 
     Route::get('/register', function () {
 

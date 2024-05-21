@@ -14,7 +14,7 @@
     @vite('resources/css/app.css')
 
     <!-- Scripts -->
-    <script src="//unpkg.com/alpinejs" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body class="font-sans h-screen  antialiased text-dark-navy bg-pattern-background-mobile-light
 tablet:bg-pattern-background-tablet-light desktop:bg-pattern-background-desktop-light bg-no-repeat
