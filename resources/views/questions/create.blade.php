@@ -30,7 +30,7 @@
 
             </div>
             <template x-for="(answer, index) in answers">
-                <div class="flex flex-col space-y-4 w-96">
+                <div class="flex flex-col space-y-4 w-96 p-4">
 
                     <div class="flex space-x-4">
 
@@ -38,7 +38,7 @@
                 1"></span></label>
 
                         <input type="text" :id="'answer_' + index" :name="'answers[' + index + '][answer_text]'"
-                               class="border border-dark-navy rounded-lg p-2" x-model="answer.answer_text" required>
+                               class="border border-dark-navy rounded-lg px-2" x-model="answer.answer_text" required>
 
                     </div>
 
@@ -49,10 +49,11 @@
                                :name="'answers[' + index +
                 '][is_correct]'"
                                x-model="answer.is_correct" value="1">
-                        <button @click="deleteAnswer(index)" type="button" x-show="answers.length > 2" class="bg-white text-bm
-                    hover:bg-red
+                        <button @click="deleteAnswer(index)" type="button" x-show="answers.length > 2" class="bg-red
+                        hover:opacity-80
+                        text-bm
                     rounded
-                    hover:cursor-pointer hover:border-red border px-4 border-dark-navy hover:text-white
+                    hover:cursor-pointer  border px-4 text-white
                     rounded-lgp-2 transition"> Remove
                         </button>
 
@@ -61,18 +62,17 @@
                 </div>
 
             </template>
-
-            <button type="button" @click="addAnswer" class="bg-white w-96 text-bm hover:bg-purple
-            hover:cursor-pointer hover:border-purple border transition
-            border-dark-navy
-            hover:text-white rounded-lg p-2">Add Another Answer
+            <div class="space-y-4">
+            <button type="button" @click="addAnswer" class=" mt-4 w-96 text-bm bg-purple
+            hover:cursor-pointer border transition hover:opacity-80
+            text-white rounded-lg p-2">Add Answer
             </button>
 
-            <button class="bg-white w-96 text-bm hover:bg-purple hover:cursor-pointer hover:border-purple border
-            border-dark-navy
-            hover:text-white rounded-lg p-2 transition"
+            <button class="w-96 text-bm bg-green hover:cursor-pointer hover:opacity-80 text-white rounded-lg p-2
+            transition"
                     type="submit">Submit
             </button>
+            </div>
 
         </form>
 

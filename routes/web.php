@@ -52,7 +52,23 @@
     });
 
    Route::get('/questions/create', function () {
+
        return view('questions.create', ['quizzes' => Quiz::all()]);
+
+   });
+
+   Route::post('/questions', function () {
+      $question = Question::create([
+           'question_text' => request('question_text'),
+           'quiz_id' => request('quiz_id')
+       ]);
+       foreach (request('answers') as $answer) {
+           $question->answers()->create([
+               'answer_text' => $answer['answer_text'],
+               'is_correct' => $answer['is_correct'] ?? false
+           ]);
+       }
+       return redirect('/quizzes');
    });
 
     Route::get('/register', function () {
