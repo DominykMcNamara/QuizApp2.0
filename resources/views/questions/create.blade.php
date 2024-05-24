@@ -63,15 +63,14 @@
 
             </template>
             <div class="space-y-4">
-            <button type="button" @click="addAnswer" class=" mt-4 w-96 text-bm bg-purple
-            hover:cursor-pointer border transition hover:opacity-80
-            text-white rounded-lg p-2">Add Answer
-            </button>
+                <x-button type="button" @click="addAnswer" class="mt-4 w-96 bg-purple transition p-2 text-white
+                text-bm">Add Answer
+                </x-button>
 
-            <button class="w-96 text-bm bg-green hover:cursor-pointer hover:opacity-80 text-white rounded-lg p-2
-            transition"
-                    type="submit">Submit
-            </button>
+                <x-button type="submit" class="mt-4 w-96 bg-green transition p-2 text-white">
+                    Submit
+                </x-button>
+
             </div>
 
         </form>
